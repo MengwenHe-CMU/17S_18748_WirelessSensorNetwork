@@ -30,8 +30,143 @@
 
 \panhline
 
+\section{Introduction}
 
+\begin{itemize}
+	\item Networked microsensors technology is a key technology for the future.
+	\item Smart disposable microsensors can be deployed almost anywhere.
+	\item Ubiquitous wireless networks of microsensors probably offer the most potential in changing the world of sensing.
+	\item Paper structure:
+	\begin{itemize}
+		\item History of research in sensor networks
+		\item Technology trends
+		\item New applications
+		\item Research issues and hard problems
+		\item Some examples
+	\end{itemize}
+\end{itemize}
 	
+\section{History of Research in Sensor Networks}
+
+\begin{itemize}
+	\item The devbelopment of sensor networks requires technologies from three different research areas:
+	\begin{itemize}
+		\item Sensing
+		\item Communication
+		\item Computing (hardware, software, and algorithms)
+	\end{itemize}
+\end{itemize}
+
+\subsection{Early Research on Military Sensor Networks}
+
+\begin{itemize}
+	\item Can be traced back to Cold War.
+	\item The sensor networks generally adopt a \textbf{hierarchical} processing structure where processing occurs at consecutive levels until the information about events of interest reaches the user.
+\end{itemize}
+
+\subsection{Distributed Sensor Networks (DSN) Program at the Defence Advanced Research Projects Agency (DARPA)}
+
+\begin{itemize}
+	\item Modern research on sensor networks started around 1980 with the DSN program at the DARPA.
+	\item R. Kahn, who was coinventor of the TCP/IP protocols and played a key role in developing the Internet, wanted to know whether the Arpanet (predecessor of the Internet) approach for communication could be extended to sensor networks.
+	\item The network was assumed to havbe many spatially distributed low-cost sensing nodes that collaborate with each other but operate autonomously, with information being routed to whichever node can best use the information.
+	\item Researchers:
+	\begin{itemize}
+		\item CMU focused on providing a network operating system that allows flexible, transparent access to distributed resources needed for a fault-tolerant DSN. They developed a communication-oriented operating system called Accent (evolved into the Mach OS), whose primitives support transparent networking, system reconfiguration, and rebinding.
+		\item MIT focused on knowledge-based signal processing techniques for tracking helicopters using a distributed array of acoustic microphones by means of signal abstractions and matching techniques.
+		\item ADS\footnote{Advanced Decision Systems, Mountain View, CA} developed a multiple-hypothesis tracking algorithm to deal with difficult situations involving high target density, missing detections, and false alarms, and decomposed the algorithm for distributed implementation.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Military Sensor Networks in the 1980s and 1990s}
+
+\begin{itemize}
+	\item In platform-centric warfare: platforms own specific weapons,k which in turn own sensors in a fairly rigid architecture.
+	\item In network-centric warfare: sensors donot necessarily belong to weapons or platforms. Instead, they collaborate with each other over a communication network, and information is sent to the appropriate shooters.
+\end{itemize}
+
+\subsection{Sensor Network Research in the 21st Century}
+
+\begin{itemize}
+	\item Latest technological advances boosted sensor networks development
+	\item Sensor Information Technology (SensIT) program pursued two key research and development thrusts:
+	\begin{itemize}
+		\item New networking techniques: sensor devices or nodes should e ready for rapid deployment, in an \textit{ad hoc} fasion, and in highly dynamic environments.
+		\item NEtworked information processing.
+	\end{itemize}
+\end{itemize}
+
+\section{Technology Trends}
+
+\begin{itemize}
+	\item Sensors, processors, and communication devices are all getting much smaller and cheaper.
+	\item WIreless netowrkds based upon IEEE 802.11 standards can now provide bandwidth approaching those of wired networks.
+	\item IEEE 802.15 standard for personal area networks (PANs) have a radius of 5 to 10 meters.
+	\item In the future, the advances in MEMS technology will produce sensors that are even more capable and versatile.
+\end{itemize}
+
+\section{New Applications}
+
+Examples:
+\begin{itemize}
+	\item Infrastructure security
+	\item Environment and Habitat Monitoring
+	\item Industrial Sensing
+	\item Traffic Control
+\end{itemize}
+
+
+\section{Hard Problems And Technical Challenges}
+
+\subsection{Ad Hoc Network Discovery}
+
+\begin{itemize}
+	\item Knowledge of the network is essential for a sensor in the network to operate properly.
+	\item In planned networks, the topology of the network is usually known a priori.
+	\item For ad hoc networks, the network topology has to be constructed in real time, and updated periodically as sensors fail or new sensors are deployed.
+	\item In addition to knowledge of the topology, each sensor also needs to know its own location.
+\end{itemize}
+
+\subsection{Network Control and Routing}
+
+\begin{itemize}
+	\item The network muse deal with resources that are dynamically changing, and the system should operate autonomously, changing its configuration as required.
+	\item Without requiring IP addresses at each node is that one can deploy network devices in very large numbers.
+	\item Survivability and adaptation to the environment are ensured through deploying an adequate number of nodes to provide redundancy in paths, and algorithms to find the right paths.
+\end{itemize}
+
+\subsection{Collaborative Signal and Information Processing}
+
+\begin{itemize}
+	\item Collaborative signal and information processing over a network is a new area of research and is related to distributed information fusion.
+	\begin{itemize}
+		\item Issue1: degree of information sharing between nodes and how nodes fuse the information from other nodes.
+		\item Issue2: tradeoff between performance and robustness.
+		\item Issue3: optimal data association is computationally expensive and requires significant bandwidth for communication.
+		\item meet mission latency and reliability requirements.
+		\item how to maximize sensor network operational life.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Tasking and Querying}
+
+\begin{itemize}
+	\item A sensor field is like a database with many unique features, and it is challenging for querying because of its instability.
+	\item It is important that users have a simple interface to interactively task and query the sensor network.
+	\item Mobile platforms can carry sensors and query devices. As a result, seamless internetwork between mobile and fixed devbices in the absence of any infrastructure is a critical and unique requirement for sensor networks.
+\end{itemize}
+
+\subsection{Security}
+
+Sensor network should be protected against intrusion and spoofing.
+
+\section{Some Recent Results}
+
+\subsection{Localized Algorithms and Directed Diffusion}
+
+\subsection{Distributed Tracking in Wireless Ad Hoc Networks}
+
+\subsection{Distributed Classification in Sensor Networks Using Mobile Agents}
 
 \end{document}
 

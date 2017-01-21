@@ -26,6 +26,27 @@
 <nav id="TOC">
 <ul>
 <li><a href="#resources">Resources</a></li>
+<li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a></li>
+<li><a href="#history-of-research-in-sensor-networks"><span class="toc-section-number">2</span> History of Research in Sensor Networks</a><ul>
+<li><a href="#early-research-on-military-sensor-networks"><span class="toc-section-number">2.1</span> Early Research on Military Sensor Networks</a></li>
+<li><a href="#distributed-sensor-networks-dsn-program-at-the-defence-advanced-research-projects-agency-darpa"><span class="toc-section-number">2.2</span> Distributed Sensor Networks (DSN) Program at the Defence Advanced Research Projects Agency (DARPA)</a></li>
+<li><a href="#military-sensor-networks-in-the-1980s-and-1990s"><span class="toc-section-number">2.3</span> Military Sensor Networks in the 1980s and 1990s</a></li>
+<li><a href="#sensor-network-research-in-the-21st-century"><span class="toc-section-number">2.4</span> Sensor Network Research in the 21st Century</a></li>
+</ul></li>
+<li><a href="#technology-trends"><span class="toc-section-number">3</span> Technology Trends</a></li>
+<li><a href="#new-applications"><span class="toc-section-number">4</span> New Applications</a></li>
+<li><a href="#hard-problems-and-technical-challenges"><span class="toc-section-number">5</span> Hard Problems And Technical Challenges</a><ul>
+<li><a href="#ad-hoc-network-discovery"><span class="toc-section-number">5.1</span> Ad Hoc Network Discovery</a></li>
+<li><a href="#network-control-and-routing"><span class="toc-section-number">5.2</span> Network Control and Routing</a></li>
+<li><a href="#collaborative-signal-and-information-processing"><span class="toc-section-number">5.3</span> Collaborative Signal and Information Processing</a></li>
+<li><a href="#tasking-and-querying"><span class="toc-section-number">5.4</span> Tasking and Querying</a></li>
+<li><a href="#security"><span class="toc-section-number">5.5</span> Security</a></li>
+</ul></li>
+<li><a href="#some-recent-results"><span class="toc-section-number">6</span> Some Recent Results</a><ul>
+<li><a href="#localized-algorithms-and-directed-diffusion"><span class="toc-section-number">6.1</span> Localized Algorithms and Directed Diffusion</a></li>
+<li><a href="#distributed-tracking-in-wireless-ad-hoc-networks"><span class="toc-section-number">6.2</span> Distributed Tracking in Wireless Ad Hoc Networks</a></li>
+<li><a href="#distributed-classification-in-sensor-networks-using-mobile-agents"><span class="toc-section-number">6.3</span> Distributed Classification in Sensor Networks Using Mobile Agents</a></li>
+</ul></li>
 </ul>
 </nav>
 <hr />
@@ -36,5 +57,117 @@
 <li><p><a href="../../Readings/Sensor Networks Evolution, Opportunities, and Challenges.pdf">Paper</a></p></li>
 </ul>
 <hr />
+<h1 id="introduction"><span class="header-section-number">1</span> Introduction</h1>
+<ul>
+<li><p>Networked microsensors technology is a key technology for the future.</p></li>
+<li><p>Smart disposable microsensors can be deployed almost anywhere.</p></li>
+<li><p>Ubiquitous wireless networks of microsensors probably offer the most potential in changing the world of sensing.</p></li>
+<li><p>Paper structure:</p>
+<ul>
+<li><p>History of research in sensor networks</p></li>
+<li><p>Technology trends</p></li>
+<li><p>New applications</p></li>
+<li><p>Research issues and hard problems</p></li>
+<li><p>Some examples</p></li>
+</ul></li>
+</ul>
+<h1 id="history-of-research-in-sensor-networks"><span class="header-section-number">2</span> History of Research in Sensor Networks</h1>
+<ul>
+<li><p>The devbelopment of sensor networks requires technologies from three different research areas:</p>
+<ul>
+<li><p>Sensing</p></li>
+<li><p>Communication</p></li>
+<li><p>Computing (hardware, software, and algorithms)</p></li>
+</ul></li>
+</ul>
+<h2 id="early-research-on-military-sensor-networks"><span class="header-section-number">2.1</span> Early Research on Military Sensor Networks</h2>
+<ul>
+<li><p>Can be traced back to Cold War.</p></li>
+<li><p>The sensor networks generally adopt a <strong>hierarchical</strong> processing structure where processing occurs at consecutive levels until the information about events of interest reaches the user.</p></li>
+</ul>
+<h2 id="distributed-sensor-networks-dsn-program-at-the-defence-advanced-research-projects-agency-darpa"><span class="header-section-number">2.2</span> Distributed Sensor Networks (DSN) Program at the Defence Advanced Research Projects Agency (DARPA)</h2>
+<ul>
+<li><p>Modern research on sensor networks started around 1980 with the DSN program at the DARPA.</p></li>
+<li><p>R. Kahn, who was coinventor of the TCP/IP protocols and played a key role in developing the Internet, wanted to know whether the Arpanet (predecessor of the Internet) approach for communication could be extended to sensor networks.</p></li>
+<li><p>The network was assumed to havbe many spatially distributed low-cost sensing nodes that collaborate with each other but operate autonomously, with information being routed to whichever node can best use the information.</p></li>
+<li><p>Researchers:</p>
+<ul>
+<li><p>CMU focused on providing a network operating system that allows flexible, transparent access to distributed resources needed for a fault-tolerant DSN. They developed a communication-oriented operating system called Accent (evolved into the Mach OS), whose primitives support transparent networking, system reconfiguration, and rebinding.</p></li>
+<li><p>MIT focused on knowledge-based signal processing techniques for tracking helicopters using a distributed array of acoustic microphones by means of signal abstractions and matching techniques.</p></li>
+<li><p>ADS<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> developed a multiple-hypothesis tracking algorithm to deal with difficult situations involving high target density, missing detections, and false alarms, and decomposed the algorithm for distributed implementation.</p></li>
+</ul></li>
+</ul>
+<h2 id="military-sensor-networks-in-the-1980s-and-1990s"><span class="header-section-number">2.3</span> Military Sensor Networks in the 1980s and 1990s</h2>
+<ul>
+<li><p>In platform-centric warfare: platforms own specific weapons,k which in turn own sensors in a fairly rigid architecture.</p></li>
+<li><p>In network-centric warfare: sensors donot necessarily belong to weapons or platforms. Instead, they collaborate with each other over a communication network, and information is sent to the appropriate shooters.</p></li>
+</ul>
+<h2 id="sensor-network-research-in-the-21st-century"><span class="header-section-number">2.4</span> Sensor Network Research in the 21st Century</h2>
+<ul>
+<li><p>Latest technological advances boosted sensor networks development</p></li>
+<li><p>Sensor Information Technology (SensIT) program pursued two key research and development thrusts:</p>
+<ul>
+<li><p>New networking techniques: sensor devices or nodes should e ready for rapid deployment, in an <em>ad hoc</em> fasion, and in highly dynamic environments.</p></li>
+<li><p>NEtworked information processing.</p></li>
+</ul></li>
+</ul>
+<h1 id="technology-trends"><span class="header-section-number">3</span> Technology Trends</h1>
+<ul>
+<li><p>Sensors, processors, and communication devices are all getting much smaller and cheaper.</p></li>
+<li><p>WIreless netowrkds based upon IEEE 802.11 standards can now provide bandwidth approaching those of wired networks.</p></li>
+<li><p>IEEE 802.15 standard for personal area networks (PANs) have a radius of 5 to 10 meters.</p></li>
+<li><p>In the future, the advances in MEMS technology will produce sensors that are even more capable and versatile.</p></li>
+</ul>
+<h1 id="new-applications"><span class="header-section-number">4</span> New Applications</h1>
+<p>Examples:</p>
+<ul>
+<li><p>Infrastructure security</p></li>
+<li><p>Environment and Habitat Monitoring</p></li>
+<li><p>Industrial Sensing</p></li>
+<li><p>Traffic Control</p></li>
+</ul>
+<h1 id="hard-problems-and-technical-challenges"><span class="header-section-number">5</span> Hard Problems And Technical Challenges</h1>
+<h2 id="ad-hoc-network-discovery"><span class="header-section-number">5.1</span> Ad Hoc Network Discovery</h2>
+<ul>
+<li><p>Knowledge of the network is essential for a sensor in the network to operate properly.</p></li>
+<li><p>In planned networks, the topology of the network is usually known a priori.</p></li>
+<li><p>For ad hoc networks, the network topology has to be constructed in real time, and updated periodically as sensors fail or new sensors are deployed.</p></li>
+<li><p>In addition to knowledge of the topology, each sensor also needs to know its own location.</p></li>
+</ul>
+<h2 id="network-control-and-routing"><span class="header-section-number">5.2</span> Network Control and Routing</h2>
+<ul>
+<li><p>The network muse deal with resources that are dynamically changing, and the system should operate autonomously, changing its configuration as required.</p></li>
+<li><p>Without requiring IP addresses at each node is that one can deploy network devices in very large numbers.</p></li>
+<li><p>Survivability and adaptation to the environment are ensured through deploying an adequate number of nodes to provide redundancy in paths, and algorithms to find the right paths.</p></li>
+</ul>
+<h2 id="collaborative-signal-and-information-processing"><span class="header-section-number">5.3</span> Collaborative Signal and Information Processing</h2>
+<ul>
+<li><p>Collaborative signal and information processing over a network is a new area of research and is related to distributed information fusion.</p>
+<ul>
+<li><p>Issue1: degree of information sharing between nodes and how nodes fuse the information from other nodes.</p></li>
+<li><p>Issue2: tradeoff between performance and robustness.</p></li>
+<li><p>Issue3: optimal data association is computationally expensive and requires significant bandwidth for communication.</p></li>
+<li><p>meet mission latency and reliability requirements.</p></li>
+<li><p>how to maximize sensor network operational life.</p></li>
+</ul></li>
+</ul>
+<h2 id="tasking-and-querying"><span class="header-section-number">5.4</span> Tasking and Querying</h2>
+<ul>
+<li><p>A sensor field is like a database with many unique features, and it is challenging for querying because of its instability.</p></li>
+<li><p>It is important that users have a simple interface to interactively task and query the sensor network.</p></li>
+<li><p>Mobile platforms can carry sensors and query devices. As a result, seamless internetwork between mobile and fixed devbices in the absence of any infrastructure is a critical and unique requirement for sensor networks.</p></li>
+</ul>
+<h2 id="security"><span class="header-section-number">5.5</span> Security</h2>
+<p>Sensor network should be protected against intrusion and spoofing.</p>
+<h1 id="some-recent-results"><span class="header-section-number">6</span> Some Recent Results</h1>
+<h2 id="localized-algorithms-and-directed-diffusion"><span class="header-section-number">6.1</span> Localized Algorithms and Directed Diffusion</h2>
+<h2 id="distributed-tracking-in-wireless-ad-hoc-networks"><span class="header-section-number">6.2</span> Distributed Tracking in Wireless Ad Hoc Networks</h2>
+<h2 id="distributed-classification-in-sensor-networks-using-mobile-agents"><span class="header-section-number">6.3</span> Distributed Classification in Sensor Networks Using Mobile Agents</h2>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Advanced Decision Systems, Mountain View, CA<a href="#fnref1">↩</a></p></li>
+</ol>
+</section>
 </body>
 </html>
