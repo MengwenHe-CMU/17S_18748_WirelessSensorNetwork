@@ -164,9 +164,44 @@ Sensor network should be protected against intrusion and spoofing.
 
 \subsection{Localized Algorithms and Directed Diffusion}
 
+\begin{itemize}
+	\item Centralized algorithms:
+	\begin{itemize}
+		\item collect data from multiple sensor nodes
+		\item potentially provide the best performance
+		\item undesireable because of high communication cost and lack of robustness and reliability.
+	\end{itemize}
+	\item Localized algorithms:
+	\begin{itemize}
+		\item the sensor nodes only communicate with sensors within a neighborhood.
+		\item robust to network changes and node failures.
+		\item scale will with increasing network size.
+		\item Difficult to design because of the potentially complicated relationship between local behavior and global behavior.
+	\end{itemize}
+	\item Estrin et al. developed directed diffusion routing algorithms that belong to the class of localized algorithms.
+	\begin{itemize}
+		\item Diffusion is a form of broadcast routing that does not specify a destination node address.
+		\item Packets are forwarded to neighboring nodes, and a direction or gradient is overlaid to control the broadcast or forwarding of the packet, which eventually reaches the destination.
+		\item The gradient could be based on geographic information or other attributes such as power, congestion and other resources available in the network nodes.
+		\item It requires considerably less energy than standard routing mechanisms such as flooding and omniscient multicast.
+	\end{itemize}
+\end{itemize}
+
 \subsection{Distributed Tracking in Wireless Ad Hoc Networks}
 
+\begin{itemize}
+	\item Tracking in ad hoc networks with microsensors poses different challenges due to communication, processing and energy constraints.
+	\item Zhao et al. addressed the dynamic sensor collaboration problem in distributed tracking to determine dynamically which sensor is most appropriate to perform the sensing, what needs to be sensed, and to whom to communicate the information.
+	\item Distributed data association algorithms are available for networks with large nodes but are computationally too expensive to implement on ad hoc networks. An approximate approach for cheap data association is called identity management.
+\end{itemize}
+
 \subsection{Distributed Classification in Sensor Networks Using Mobile Agents}
+
+\begin{itemize}
+	\item The bandwidth of a wireless sensor network is typically lower than that of a wired network, a sensor network's communications requirements may exceed their capacities.
+	\item Mobile agents have been proposed as a solution to this dilemma (above sentence).
+	\item In a mobile-agent-based DSN, data stay at each local site or sensor, while the integration or fusion code is moved to the data. Communication bandwidth requrieemnt may be reduced if the agent is smaller in size than the data.
+\end{itemize}
 
 \end{document}
 

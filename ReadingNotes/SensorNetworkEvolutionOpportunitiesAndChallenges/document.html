@@ -161,8 +161,40 @@
 <p>Sensor network should be protected against intrusion and spoofing.</p>
 <h1 id="some-recent-results"><span class="header-section-number">6</span> Some Recent Results</h1>
 <h2 id="localized-algorithms-and-directed-diffusion"><span class="header-section-number">6.1</span> Localized Algorithms and Directed Diffusion</h2>
+<ul>
+<li><p>Centralized algorithms:</p>
+<ul>
+<li><p>collect data from multiple sensor nodes</p></li>
+<li><p>potentially provide the best performance</p></li>
+<li><p>undesireable because of high communication cost and lack of robustness and reliability.</p></li>
+</ul></li>
+<li><p>Localized algorithms:</p>
+<ul>
+<li><p>the sensor nodes only communicate with sensors within a neighborhood.</p></li>
+<li><p>robust to network changes and node failures.</p></li>
+<li><p>scale will with increasing network size.</p></li>
+<li><p>Difficult to design because of the potentially complicated relationship between local behavior and global behavior.</p></li>
+</ul></li>
+<li><p>Estrin et al. developed directed diffusion routing algorithms that belong to the class of localized algorithms.</p>
+<ul>
+<li><p>Diffusion is a form of broadcast routing that does not specify a destination node address.</p></li>
+<li><p>Packets are forwarded to neighboring nodes, and a direction or gradient is overlaid to control the broadcast or forwarding of the packet, which eventually reaches the destination.</p></li>
+<li><p>The gradient could be based on geographic information or other attributes such as power, congestion and other resources available in the network nodes.</p></li>
+<li><p>It requires considerably less energy than standard routing mechanisms such as flooding and omniscient multicast.</p></li>
+</ul></li>
+</ul>
 <h2 id="distributed-tracking-in-wireless-ad-hoc-networks"><span class="header-section-number">6.2</span> Distributed Tracking in Wireless Ad Hoc Networks</h2>
+<ul>
+<li><p>Tracking in ad hoc networks with microsensors poses different challenges due to communication, processing and energy constraints.</p></li>
+<li><p>Zhao et al. addressed the dynamic sensor collaboration problem in distributed tracking to determine dynamically which sensor is most appropriate to perform the sensing, what needs to be sensed, and to whom to communicate the information.</p></li>
+<li><p>Distributed data association algorithms are available for networks with large nodes but are computationally too expensive to implement on ad hoc networks. An approximate approach for cheap data association is called identity management.</p></li>
+</ul>
 <h2 id="distributed-classification-in-sensor-networks-using-mobile-agents"><span class="header-section-number">6.3</span> Distributed Classification in Sensor Networks Using Mobile Agents</h2>
+<ul>
+<li><p>The bandwidth of a wireless sensor network is typically lower than that of a wired network, a sensor network’s communications requirements may exceed their capacities.</p></li>
+<li><p>Mobile agents have been proposed as a solution to this dilemma (above sentence).</p></li>
+<li><p>In a mobile-agent-based DSN, data stay at each local site or sensor, while the integration or fusion code is moved to the data. Communication bandwidth requrieemnt may be reduced if the agent is smaller in size than the data.</p></li>
+</ul>
 <section class="footnotes">
 <hr />
 <ol>
