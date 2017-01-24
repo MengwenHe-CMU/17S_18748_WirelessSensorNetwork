@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Prof. Raj (Instructor), HMW-Alexander (Noter)">
+  <title>Introduction and Applications</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script type="text/x-mathjax-config">
+  	MathJax.Hub.Config({
+  		TeX: {
+  			equationNumbers: {autoNumber: "all"}
+  		}
+  	});
+  </script>
+</head>
+<body>
+<header>
+<h1 class="title"><strong>Introduction and Applications</strong></h1>
+<p class="author">Prof. Raj (Instructor), HMW-Alexander (Noter)</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#resources">Resources</a></li>
+<li><a href="#advantages-of-wsn"><span class="toc-section-number">1</span> Advantages of WSN</a></li>
+<li><a href="#sensors-actuators"><span class="toc-section-number">2</span> Sensors &amp; Actuators</a></li>
+<li><a href="#energy"><span class="toc-section-number">3</span> Energy</a><ul>
+<li><a href="#state-of-the-practice"><span class="toc-section-number">3.1</span> State of the Practice</a></li>
+</ul></li>
+<li><a href="#core-principles"><span class="toc-section-number">4</span> Core Principles</a><ul>
+<li><a href="#laws-and-principles-to-follow"><span class="toc-section-number">4.1</span> Laws and Principles to Follow</a></li>
+<li><a href="#challenges"><span class="toc-section-number">4.2</span> Challenges</a></li>
+<li><a href="#why-not-adapt-end-to-end-lookup-tables-in-routers"><span class="toc-section-number">4.3</span> Why not adapt “end-to-end&quot; Lookup tables in routers</a></li>
+<li><a href="#fine-grained-time-and-location"><span class="toc-section-number">4.4</span> Fine-Grained Time and Location</a></li>
+<li><a href="#coverage-measure"><span class="toc-section-number">4.5</span> Coverage Measure</a></li>
+<li><a href="#in-netowrk-processing"><span class="toc-section-number">4.6</span> In-Netowrk Processing</a></li>
+<li><a href="#distributed-representation-and-sotrage"><span class="toc-section-number">4.7</span> Distributed Representation and Sotrage</a></li>
+<li><a href="#sensor-database-system"><span class="toc-section-number">4.8</span> Sensor Database System</a></li>
+<li><a href="#new-wsn-paradigms"><span class="toc-section-number">4.9</span> New WSN Paradigms</a></li>
+</ul></li>
+</ul>
+</nav>
+<hr />
+<p><a href="../index.html">Back to Index</a></p>
+<hr />
+<h1 id="resources" class="unnumbered">Resources</h1>
+<ul>
+<li><p><a href="../../Lectures/LectureFile.pdf">Lecture</a></p></li>
+</ul>
+<hr />
+<h1 id="advantages-of-wsn"><span class="header-section-number">1</span> Advantages of WSN</h1>
+<ul>
+<li><p>Small size</p></li>
+<li><p>(Relatively) low cost of nodes</p></li>
+<li><p>Reduce (eliminate?) cost of wiring</p></li>
+<li><p>Self-configuring and self-optimizing</p></li>
+<li><p>Self-healing: redundancy and fault-tolerance</p></li>
+<li><p>Long lifetimes (?)</p></li>
+<li><p>Interfacing with the physical world.</p></li>
+</ul>
+<h1 id="sensors-actuators"><span class="header-section-number">2</span> Sensors &amp; Actuators</h1>
+<h1 id="energy"><span class="header-section-number">3</span> Energy</h1>
+<ul>
+<li><p>Energy: a measure of being able to do work.</p></li>
+<li><p>Unit: 1 J(Joule) = one watt per seconde</p></li>
+</ul>
+<h2 id="state-of-the-practice"><span class="header-section-number">3.1</span> State of the Practice</h2>
+<p>The energy cost of communication is very expensive.</p>
+<h1 id="core-principles"><span class="header-section-number">4</span> Core Principles</h1>
+<h2 id="laws-and-principles-to-follow"><span class="header-section-number">4.1</span> Laws and Principles to Follow</h2>
+<ul>
+<li><p>Propagation laws for communications:</p>
+<ul>
+<li><p>Think volume:</p>
+<ul>
+<li><p>Surface area of a sphere of radius <span class="math inline">\(r=4\pi r^2\)</span></p></li>
+</ul></li>
+<li><p>Think signal quality:</p>
+<ul>
+<li><p><strong>Multipath</strong> effects result from radio signals reaching a receiver by two or more paths (Rayleigh fading)</p></li>
+<li><p><strong>Attenuation</strong> results from dissipation of energy</p></li>
+<li><p>Frequency shifts from <strong>Doppler effect</strong></p></li>
+</ul></li>
+<li><p>Think noise:</p>
+<ul>
+<li><p>Ambient white noise</p></li>
+<li><p>Interference from other electro-magnetic sources.</p></li>
+</ul></li>
+</ul></li>
+<li><p>Physical distribution</p></li>
+<li><p>Estimation theory for detection</p></li>
+<li><p>Control and hybrid systems theory for control.</p></li>
+</ul>
+<h2 id="challenges"><span class="header-section-number">4.2</span> Challenges</h2>
+<ul>
+<li><p>Scale</p>
+<ul>
+<li><p>Network control and routing</p></li>
+<li><p>Collaborative signal and information processing</p></li>
+</ul></li>
+<li><p>Limited access</p>
+<ul>
+<li><p>Security</p></li>
+<li><p>Limited energy</p></li>
+</ul></li>
+<li><p>Extreme dynamics</p>
+<ul>
+<li><p>Ad-Hoc network discovery</p></li>
+<li><p>Tasking and querying</p></li>
+</ul></li>
+</ul>
+<h2 id="why-not-adapt-end-to-end-lookup-tables-in-routers"><span class="header-section-number">4.3</span> Why not adapt “end-to-end&quot; Lookup tables in routers</h2>
+<ul>
+<li><p>Internet routes data using IP addresses in packets and lookup tables in routers</p>
+<ul>
+<li><p>humans get data by “naming data&quot; to a search engine</p></li>
+<li><p>Many levels of indirection between name and IP address</p></li>
+<li><p>embedded, energy-constrained, unattended systems cannot tolerate communication overhead of indirection.</p></li>
+</ul></li>
+</ul>
+<h2 id="fine-grained-time-and-location"><span class="header-section-number">4.4</span> Fine-Grained Time and Location</h2>
+<p>fine-grained localization and time synchronization needed to detect events in 3-D space and improve estimation across nodes.</p>
+<h2 id="coverage-measure"><span class="header-section-number">4.5</span> Coverage Measure</h2>
+<ul>
+<li><p>Area coverage: fraction of area covered by sensors</p></li>
+<li><p>Detectability: probability that sensors detect moving objects</p></li>
+<li><p>Node coverage: fraction of sensors covered y other sensors.</p></li>
+</ul>
+<h2 id="in-netowrk-processing"><span class="header-section-number">4.6</span> In-Netowrk Processing</h2>
+<ul>
+<li><p>Communication expensive when limited power and bandwidth</p></li>
+<li><p>so perform data processing in network.</p></li>
+</ul>
+<h2 id="distributed-representation-and-sotrage"><span class="header-section-number">4.7</span> Distributed Representation and Sotrage</h2>
+<ul>
+<li><p>Data-centric protocols, in-netowrk processing</p></li>
+<li><p>Pattern-triggered data collection</p></li>
+</ul>
+<h2 id="sensor-database-system"><span class="header-section-number">4.8</span> Sensor Database System</h2>
+<p>Sensor database supports distributed query processing over sensor network</p>
+<h2 id="new-wsn-paradigms"><span class="header-section-number">4.9</span> New WSN Paradigms</h2>
+<ul>
+<li><p>Self-configuration systems that adapt to unpredictable environment</p></li>
+<li><p>Leverage data processing inside the network</p>
+<ul>
+<li><p>exploit computation near data to reduce communication</p></li>
+<li><p>collaborative signal processing</p></li>
+<li><p>achieve desired global behavior with localized algorithms</p></li>
+</ul></li>
+<li><p>Long-lived, unattended, un-tethered, low duty-cycle systems</p></li>
+</ul>
+</body>
+</html>

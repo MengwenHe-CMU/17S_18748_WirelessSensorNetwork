@@ -1,0 +1,165 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[margin=2cm]{geometry}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[colorlinks]{hyperref}
+
+\newcommand{\panhline}{\begin{center}\rule{\textwidth}{1pt}\end{center}}
+
+\title{\textbf{Introduction and Applications}}
+\author{Prof. Raj (Instructor), HMW-Alexander (Noter)}
+
+\begin{document}
+
+\maketitle
+
+\panhline
+\href{../index.html}{Back to Index}
+
+\panhline
+\tableofcontents
+
+\section*{Resources}
+
+\begin{itemize}
+	\item \href{../../Lectures/LectureFile.pdf}{Lecture}
+\end{itemize}
+
+\panhline
+
+\section{Advantages of WSN}
+
+\begin{itemize}
+	\item Small size
+	\item (Relatively) low cost of nodes
+	\item Reduce (eliminate?) cost of wiring
+	\item Self-configuring and self-optimizing
+	\item Self-healing: redundancy and fault-tolerance
+	\item Long lifetimes (?)
+	\item Interfacing with the physical world.
+\end{itemize}
+	
+\section{Sensors \& Actuators}
+
+%TODO add snipping from lectures
+
+\section{Energy}
+
+\begin{itemize}
+	\item Energy: a measure of being able to do work.
+	\item Unit: 1 J(Joule) = one watt per seconde
+\end{itemize}
+
+\subsection{State of the Practice}
+
+The energy cost of communication is very expensive.
+
+\section{Core Principles}
+
+\subsection{Laws and Principles to Follow}
+
+\begin{itemize}
+	\item Propagation laws for communications:
+	\begin{itemize}
+		\item Think volume:
+		\begin{itemize}
+			\item Surface area of a sphere of radius $r=4\pi r^2$
+		\end{itemize}
+		\item Think signal quality:
+		\begin{itemize}
+			\item \textbf{Multipath} effects result from radio signals reaching a receiver by two or more paths (Rayleigh fading)
+			\item \textbf{Attenuation} results from dissipation of energy
+			\item Frequency shifts from \textbf{Doppler effect}
+		\end{itemize}
+		\item Think noise:
+		\begin{itemize}
+			\item Ambient white noise
+			\item Interference from other electro-magnetic sources.
+		\end{itemize}
+	\end{itemize}
+	\item Physical distribution
+	\item Estimation theory for detection
+	\item Control and hybrid systems theory for control.
+\end{itemize}
+
+\subsection{Challenges}
+
+\begin{itemize}
+	\item Scale
+	\begin{itemize}
+		\item Network control and routing
+		\item Collaborative signal and information processing
+	\end{itemize}
+	\item Limited access
+	\begin{itemize}
+		\item Security
+		\item Limited energy
+	\end{itemize}
+	\item Extreme dynamics
+	\begin{itemize}
+		\item Ad-Hoc network discovery
+		\item Tasking and querying
+	\end{itemize}
+\end{itemize}
+
+\subsection{Why not adapt ``end-to-end" Lookup tables in routers}
+
+\begin{itemize}
+	\item Internet routes data using IP addresses in packets and lookup tables in routers
+	\begin{itemize}
+		\item humans get data by ``naming data" to a search engine
+		\item Many levels of indirection between name and IP address
+		\item embedded, energy-constrained, unattended systems cannot tolerate communication overhead of indirection.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Fine-Grained Time and Location}
+
+fine-grained localization and time synchronization needed to detect events in 3-D space and improve estimation across nodes.
+
+\subsection{Coverage Measure}
+
+\begin{itemize}
+	\item Area coverage: fraction of area covered by sensors
+	\item Detectability: probability that sensors detect moving objects
+	\item Node coverage: fraction of sensors covered y other sensors.
+\end{itemize}
+
+\subsection{In-Netowrk Processing}
+
+\begin{itemize}
+	\item Communication expensive when limited power and bandwidth
+	\item so perform data processing in network.
+\end{itemize}
+
+\subsection{Distributed Representation and Sotrage}
+
+\begin{itemize}
+	\item Data-centric protocols, in-netowrk processing
+	\item Pattern-triggered data collection
+\end{itemize}
+
+\subsection{Sensor Database System}
+
+Sensor database supports distributed query processing over sensor network
+
+\subsection{New WSN Paradigms}
+
+\begin{itemize}
+	\item Self-configuration systems that adapt to unpredictable environment
+	\item Leverage data processing inside the network
+	\begin{itemize}
+		\item exploit computation near data to reduce communication
+		\item collaborative signal processing
+		\item achieve desired global behavior with localized algorithms
+	\end{itemize}
+	\item Long-lived, unattended, un-tethered, low duty-cycle systems
+\end{itemize}
+
+\end{document}
+
+
+
