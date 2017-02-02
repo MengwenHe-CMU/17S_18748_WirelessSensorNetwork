@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Emily Rupple, Iljoo Baek, Mengwen He">
+  <title>18-748 Wireless Sensor Networks Lab 1</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script type="text/x-mathjax-config">
+  	MathJax.Hub.Config({
+  		TeX: {
+  			equationNumbers: {autoNumber: "all"}
+  		}
+  	});
+  </script>
+</head>
+<body>
+<header>
+<h1 class="title"><strong>18-748 Wireless Sensor Networks Lab 1</strong></h1>
+<p class="author">Emily Rupple, Iljoo Baek, Mengwen He</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#assignment-2"><span class="toc-section-number">1</span> Assignment 2</a><ul>
+<li><a href="#data-measurement"><span class="toc-section-number">1.1</span> Data Measurement</a></li>
+<li><a href="#compute-path-loss-exponent-n"><span class="toc-section-number">1.2</span> Compute Path Loss Exponent <span class="math inline">\(n\)</span></a></li>
+</ul></li>
+<li><a href="#assignment-3"><span class="toc-section-number">2</span> Assignment 3</a><ul>
+<li><a href="#data-collection"><span class="toc-section-number">2.1</span> Data Collection</a></li>
+<li><a href="#worst-case-response-time-estimation"><span class="toc-section-number">2.2</span> Worst-case Response Time Estimation</a></li>
+<li><a href="#explanation-of-the-differences"><span class="toc-section-number">2.3</span> Explanation of The Differences</a><ul>
+<li><a href="#response-time"><span class="toc-section-number">2.3.1</span> Response Time</a></li>
+<li><a href="#worst-case-response-time"><span class="toc-section-number">2.3.2</span> Worst-case Response Time</a></li>
+</ul></li>
+<li><a href="#bonus1-find-a-tight-cpu-reserve-budget-for-each-task."><span class="toc-section-number">2.4</span> Bonus1: Find a tight CPU reserve budget for each task.</a></li>
+<li><a href="#bonus2-plot-graphs-for-both-basks-to-show-their-response-times."><span class="toc-section-number">2.5</span> Bonus2: Plot graphs for both basks to show their response times.</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="assignment-2"><span class="header-section-number">1</span> Assignment 2</h1>
+<h2 id="data-measurement"><span class="header-section-number">1.1</span> Data Measurement</h2>
+<table>
+<caption>The Measurements of Distance and RSSI</caption>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Yard</td>
+<td style="text-align: center;">Meter</td>
+<td style="text-align: center;">Min</td>
+<td style="text-align: center;">Max</td>
+<td style="text-align: center;">Ave.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">39</td>
+<td style="text-align: center;">51</td>
+<td style="text-align: center;">45</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4.57</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">24</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">9.14</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">18</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">13.72</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">18.29</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">22.86</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<p><img src="./img/data.png" alt="image" width="566" /></p>
+<h2 id="compute-path-loss-exponent-n"><span class="header-section-number">1.2</span> Compute Path Loss Exponent <span class="math inline">\(n\)</span></h2>
+<p>Path loss exponent is given by: <span class="math display">\[L=10n\log_{10}d+C\]</span></p>
+<ul>
+<li><p><span class="math inline">\(L\)</span>: path loss</p></li>
+<li><p><span class="math inline">\(n\)</span>: path loss exponent</p></li>
+<li><p><span class="math inline">\(d\)</span>: distance in meters</p></li>
+<li><p><span class="math inline">\(C\)</span>: system constant</p></li>
+</ul>
+<p>From two different data points: <span class="math display">\[(L2-L1)=10n\log_{10}(d2/d1) \Rightarrow n=(L2-L1)/(10\log_{10}(d2/d1))\]</span></p>
+<p>As RSSI is linearly related to path loss <span class="math display">\[(L2-L1)=(RSSI2-RSSI1)\]</span></p>
+<p>Fix <span class="math inline">\(d1=4.57\)</span>, <span class="math inline">\(L1=24\)</span> and get the estimation as Tab.[tab:pathloss]:</p>
+<table>
+<caption>The Estimation of Path Loss Exponent<span data-label="tab:pathloss"></span></caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(d2\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(L2\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(n\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">9.14</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">-1.993</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">13.72</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">-1.885</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">18.29</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">-1.992</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">22.86</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-3.433 (invalid)</td>
+</tr>
+</tbody>
+</table>
+<p>Because we cannot get RSSI value when <span class="math inline">\(d2=22.86\)</span>, we cannot trust this measurement that just represents the margin of the signal coverage. Therefore, the estimated Path Loss Exponent is: <span class="math display">\[\mathbb{E}[n]=\frac{-1.993-1.885-1.992}{3}=-1.957\]</span> <span class="math display">\[Var[n]=\frac{(1.957-1.993)^2+(1.957-1.885)^2+(1.957-1.992)^2}{3}=0.0039\]</span> <span class="math display">\[\sigma=\sqrt{Var[n]}=0.0621\]</span></p>
+<h1 id="assignment-3"><span class="header-section-number">2</span> Assignment 3</h1>
+<h2 id="data-collection"><span class="header-section-number">2.1</span> Data Collection</h2>
+<p>  </p>
+<h2 id="worst-case-response-time-estimation"><span class="header-section-number">2.2</span> Worst-case Response Time Estimation</h2>
+<p>Because the task1 and task2 are released every 1s and 2s, we can directly get their response time from the nanosecond part, and thus easily get the worst-case response time as below:</p>
+<ul>
+<li><p>Case 1:</p>
+<ul>
+<li><p>Task1: 601562808</p></li>
+<li><p>Task2: 299804841</p></li>
+</ul></li>
+<li><p>Case 2:</p>
+<ul>
+<li><p>Task1: 298828278</p></li>
+<li><p>Task2: 601562808</p></li>
+</ul></li>
+</ul>
+<h2 id="explanation-of-the-differences"><span class="header-section-number">2.3</span> Explanation of The Differences</h2>
+<h3 id="response-time"><span class="header-section-number">2.3.1</span> Response Time</h3>
+<p>For case1, because task1 has lower priority, it will be preempted by task2 every 2 seconds; therefore, the response time of task1 is not stable. For case2, because task1 has higher priority, it will not be preempted by task2; therefore, the response time of task1 is stable.</p>
+<p>For task2, because its period interval is longer than task1’s, and they form a harmonized taskset; therefore, task2’s response time is stable for both cases.</p>
+<h3 id="worst-case-response-time"><span class="header-section-number">2.3.2</span> Worst-case Response Time</h3>
+<p>Comparing the worst-case response time of task1 and task2 from two cases, we found that the task with higher priority will have smaller worst-case response time.</p>
+<h2 id="bonus1-find-a-tight-cpu-reserve-budget-for-each-task."><span class="header-section-number">2.4</span> Bonus1: Find a tight CPU reserve budget for each task.</h2>
+<p>From the experiment, we know that if task1 with shorter period interval has higher priority, both tasks can have stable response time; therefore, our method is first to use the RMS(Rate-monotonic scheduling) to assign the priority to each task, and then assign each task’s reserve budget equals to its worst-case response time.</p>
+<h2 id="bonus2-plot-graphs-for-both-basks-to-show-their-response-times."><span class="header-section-number">2.5</span> Bonus2: Plot graphs for both basks to show their response times.</h2>
+</body>
+</html>
