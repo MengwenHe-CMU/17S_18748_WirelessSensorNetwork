@@ -246,12 +246,12 @@
 			\hline
 			0x00		&	0x00 [1], $\rho$ [1], $NID$ [1]	& 3	&	Organization Message	&	Parent $\rightarrow$ Child & Y	\\
 			\hline
-			0x01		&	0x01 [1], $\rho$ [1], $PID$ [1], $<PID,NID>_{(R)}$ [2]	&	5	&	Organization Message Reply	& Child $\rightarrow$ Parent & Y	\\
+			0x01		&	0x01 [1], $\rho$ [1], $PID$ [1], $CID$ [2]	&	4	&	Organization Message Reply	& Child $\rightarrow$ Parent & Y	\\
 			\hline
 			0x02		&	0x02 [1], $\rho$ [1], $NID$ [1]	& 3	&	Organization Message Reply Ack	&	Parent $\rightarrow$ Child & N	\\
 			\hline
 			\hline
-			0x03		&	0x03 [1], $\rho$ [1], $PID$ [1], $NID_{(R)}$ [1], $Sec_{(R)}$ [4], $NSec_{(R)}$ [4], $L_{t/R}$ [2]	&	14	&	Light Value Message & Child $\rightarrow$ Parent & Y \\
+			0x03		&	0x03 [1], $\rho$ [1], $PID$ [1], $PID_{(R)}$ [1], $NID_{(R)}$ [1], $Sec_{(R)}$ [4], $NSec_{(R)}$ [4], $L_{t/R}$ [2]	&	15	&	Light Value Message & Child $\rightarrow$ Parent & Y \\
 			\hline
 			\hline
 			0x04		&	0x04 [1], $\rho$ [1], $NID$ [1], $dt$ [4] & 7 & Sample Rate Message & Parent $\rightarrow$ Child & Y \\
